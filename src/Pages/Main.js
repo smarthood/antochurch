@@ -6,11 +6,26 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import BasicCarousel from '../components/BasicCarousel ';
 export default function Main() {
   const ItemData = [1, 2, 3, 4, 5, 6, 7]
+
+  const slides = [
+    { url: "./img/banner_1.jpg", title: "Banner1" },
+    { url: "./img/banner_2.jpg", title: "Banner2" },
+  ];
+  const containerStyles = {
+    width: "500px",
+    height: "280px",
+    margin: "0 auto",
+  };
   return (
     <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+      <div style={containerStyles}>
+        <BasicCarousel slides={slides} />
+      </div>
+      <h1 className="heading"></h1>
+      <hr />
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -45,7 +60,6 @@ export default function Main() {
           <div className="swiper-button-next slider-arrow">
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
-          <div className="swiper-pagination"></div>
         </div>
       </Swiper>
     </div>
