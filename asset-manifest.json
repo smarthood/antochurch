@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/antochurch/static/css/main.6741f872.css",
+    "main.js": "/antochurch/static/js/main.e3001d50.js",
+    "static/media/left.png": "/antochurch/static/media/left.071a49c0d95441184bc3.png",
+    "static/media/right.png": "/antochurch/static/media/right.3d3a4ddea0933336ea4c.png",
+    "index.html": "/antochurch/index.html",
+    "main.6741f872.css.map": "/antochurch/static/css/main.6741f872.css.map",
+    "main.e3001d50.js.map": "/antochurch/static/js/main.e3001d50.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6741f872.css",
+    "static/js/main.e3001d50.js"
+  ]
+}
