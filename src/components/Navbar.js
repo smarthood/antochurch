@@ -16,9 +16,9 @@ export default function Navbar() {
   }
   const route = (
     <>
-      < Link to="/program"> Program</Link>
+      < Link to=""> Main</Link>
       <Link to="/gallery">Gallery</Link>
-      <Link to="/news">News</Link>
+      <Link to="/news">Youtube</Link>
       <Link to="/history">History</Link>
       <Link to="/donate">Donate</Link>
     </>

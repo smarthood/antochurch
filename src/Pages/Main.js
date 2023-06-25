@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Border from '../assets/images/border.png'
 import BasicCarousel from '../components/BasicCarousel ';
 export default function Main() {
   const ItemData = [1, 2, 3, 4, 5, 6, 7]
@@ -15,8 +16,8 @@ export default function Main() {
     { url: "./img/banner_2.jpg", title: "Banner2" },
   ];
   const containerStyles = {
-    width: "500px",
-    height: "280px",
+    width: "100%",
+    height: "480px",
     margin: "0 auto",
   };
   return (
@@ -24,7 +25,7 @@ export default function Main() {
       <div style={containerStyles}>
         <BasicCarousel slides={slides} />
       </div>
-      <h1 className="heading"></h1>
+      {/* <h1 className="heading"></h1>
       <hr />
       <Swiper
         effect={'coverflow'}
@@ -49,7 +50,7 @@ export default function Main() {
       >
         {ItemData.map((item) => (
           <SwiperSlide>
-            <img src={`img/${item}.jpg`} alt="slide_image" />
+            <img width='100%' src={`img/${item}.jpg`} alt="slide_image" />
           </SwiperSlide>
         ))}
 
@@ -61,7 +62,11 @@ export default function Main() {
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
         </div>
-      </Swiper>
+      </Swiper> */}
+      <div className="desc">
+        <h1>" This is a text.</h1>
+        <img src={Border} alt="border" />
+      </div>
     </div>
   )
 }
