@@ -84,6 +84,7 @@ body {
 }
 .swiper_container {
   height: 47rem;
+  width: 100% !important;
 }
 .swiper-slide {
   width: 28rem !important;
@@ -178,4 +179,9 @@ body {
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+.my-text {
+  white-space: pre-line;
+  padding: 10px;
+  text-indent: 50px;
 }
