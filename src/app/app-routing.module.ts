@@ -5,17 +5,17 @@ import { HomeComponent } from './core/pages/home/home.component';
 import { HistoryComponent } from './core/pages/history/history.component';
 import { NewsComponent } from './core/pages/news/news.component';
 import { DonateComponent } from './core/pages/donate/donate.component';
-import { YoutubeComponent } from './core/pages/youtube/youtube.component';
+import { GalleryComponent } from './core/pages/gallery/gallery.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main/home', pathMatch: 'full' },
   {
     path: 'main', component: NavComponent, children: [
       { path: 'home', component: HomeComponent },
+      { path: 'gallery', component: GalleryComponent },
       { path: 'history', component: HistoryComponent },
       { path: 'news', component: NewsComponent },
-      { path: 'donate', component: DonateComponent },
-      { path: 'youtube', component: YoutubeComponent }
+      { path: 'donate', component: DonateComponent }
     ]
   }
 ];

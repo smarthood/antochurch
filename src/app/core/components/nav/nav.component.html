@@ -5,33 +5,34 @@
         <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
       </div>
       <span class="example-spacer" fxHide.gt-sm="true"></span>
-      <span>Antochurch</span>
+      <span routerLink="home" style="cursor: pointer;">புனித அந்தோணியார் ஆலயம்</span>
       <span class="example-spacer" fxHide.lt-md="true"></span>
       <div fxShow="true" fxHide.lt-md="true">
-        <a routerLink="gallery" routerLinkActive="active" mat-button>Gallery</a>
-        <a routerLink="news" routerLinkActive="active" mat-button>News</a>
-        <a routerLink="youtube" routerLinkActive="active" mat-button>Youtube</a>
-        <a routerLink="history" routerLinkActive="active" mat-button>History</a>
-        <a routerLink="donate" routerLinkActive="active" mat-button>Donate</a>
+        <a routerLink="gallery" routerLinkActive="active" mat-button>களஞ்சியம்</a>
+        <a routerLink="news" routerLinkActive="active" mat-button>செய்தி</a>
+        <a href="https://www.youtube.com/@antochurchantonyarpuram7440" routerLinkActive="active" mat-button>வலைஒளி</a>
+        <a routerLink="history" routerLinkActive="active" mat-button>வரலாறு</a>
+        <a routerLink="donate" routerLinkActive="active" mat-button>காணிக்கை</a>
       </div>
     </mat-toolbar>
   </div>
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav #sidenav fxLayout="column" mode="over">
       <div fxLayout="column" class="column" (click)="sidenav.close()">
-        <a routerLink="gallery" routerLinkActive="active" mat-button>Gallery</a>
+        <a routerLink="gallery" routerLinkActive="active" mat-button>களஞ்சியம்</a>
         <mat-divider></mat-divider>
-        <a routerLink="news" routerLinkActive="active" mat-button>News</a>
+        <a routerLink="news" routerLinkActive="active" mat-button>செய்தி</a>
         <mat-divider></mat-divider>
-        <a routerLink="youtube" routerLinkActive="active" mat-button>Youtube</a>
+        <a href="https://www.youtube.com/@antochurchantonyarpuram7440" routerLinkActive="active" mat-button>வலைஒளி</a>
         <mat-divider></mat-divider>
-        <a routerLink="history" routerLinkActive="active" mat-button>History</a>
+        <a routerLink="history" routerLinkActive="active" mat-button>வரலாறு</a>
         <mat-divider></mat-divider>
-        <a routerLink="donate" routerLinkActive="active" mat-button>Donate</a>
+        <a routerLink="donate" routerLinkActive="active" mat-button>காணிக்கை</a>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content style="min-height: 100vh;">
+    <mat-sidenav-content style="min-height: 100vh;padding: 20px;">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
+  <app-footer></app-footer>
 </div>
