@@ -8,7 +8,7 @@ import { DonateComponent } from './core/pages/donate/donate.component';
 import { GalleryComponent } from './core/pages/gallery/gallery.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'main/news', pathMatch: 'full' },
   {
     path: 'main', component: NavComponent, children: [
       { path: 'home', component: HomeComponent },

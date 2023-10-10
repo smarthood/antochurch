@@ -9,20 +9,10 @@ import { ApiService } from '../../services/api.service';
 export class GalleryComponent {
   images: any[] = [];
 
-  constructor(private pexelsService: ApiService) { }
-
+  constructor(private apiService: ApiService) { }
   ngOnInit(): void {
-    this.getPexelsImages('jesus');
-  }
-
-  getPexelsImages(query: string): void {
-    this.pexelsService.getImages(query).subscribe(
-      (response) => {
-        this.images = response.photos;
-      },
-      (error) => {
-        console.error('Error fetching images:', error);
-      }
-    );
+    this.apiService.getData('gallery').subscribe((res) => {
+      this.images = res.documents
+    })
   }
 }

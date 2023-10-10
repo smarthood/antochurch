@@ -1,22 +1,19 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://api.pexels.com/v1';
-  private apiKey = '563492ad6f9170000100000133a365f58c5e4741ba2712ea4ce71f94'; // Replace with your actual API key
+  private apiUrl = 'https://firestore.googleapis.com/v1/projects/';
+  private apiKey = environment.firebase.projectId; // Replace with your actual API key
 
   constructor(private http: HttpClient) { }
 
-  getImages(query: string): Observable<any> {
-    const headers = new HttpHeaders({
-      Authorization: this.apiKey,
-    });
-
-    const url = `${this.apiUrl}/search?query=${query}`;
-    return this.http.get(url, { headers });
+  getData(query: string): Observable<any> {
+    const url = `${this.apiUrl}${this.apiKey}/databases/(default)/documents/${query}`;
+    return this.http.get(url);
   }
 }
