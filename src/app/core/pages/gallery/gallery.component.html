@@ -1,7 +1,7 @@
 <div class="container">
   <div class="grid-wrapper">
-    <div *ngFor="let image of images">
-      <img [src]="image.src.medium" alt="name">
+    <div *ngFor="let image of images" (click)="viewImage(image?.fields?.url?.stringValue)">
+      <img [src]="image?.fields?.url?.stringValue" alt="name" height="100%">
     </div>
   </div>
 </div>

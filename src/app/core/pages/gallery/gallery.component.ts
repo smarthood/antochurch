@@ -12,7 +12,11 @@ export class GalleryComponent {
   constructor(private apiService: ApiService) { }
   ngOnInit(): void {
     this.apiService.getData('gallery').subscribe((res) => {
+      console.log(res)
       this.images = res.documents
     })
+  }
+  viewImage(url: string) {
+    window.location.href = url
   }
 }

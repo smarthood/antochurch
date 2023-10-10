@@ -1,3 +1,30 @@
-<div class="news-container" style="text-align: center;">
-  No News Available
+<div class="container" fxLayoutAlign="center center" fxFlex="100%">
+  <div class="news-container" *ngIf="news?.length;else noTemplate" fxLayout="row wrap" fxLayoutGap="20px"
+    fxLayoutAlign="space-between start">
+    <mat-card class="example-card" *ngFor="let item of news" fxFlex="30%" fxFlex.lt-md="100%">
+      <mat-card-header>
+        <mat-card-title>{{item?.fields?.title?.stringValue}}</mat-card-title>
+        <!-- <mat-card-subtitle>{{item?.fields?.date?.integerValue | date }}</mat-card-subtitle> -->
+      </mat-card-header>
+      <div class="img-container" style="height: 300px;overflow: hidden;" fxLayoutAlign="center center">
+        <img mat-card-image height="100%" width="auto" [src]="item?.fields?.url?.stringValue"
+          onerror="this.src='../../../../assets/noimg.jpg'" alt="Photo of a Shiba Inu">
+      </div>
+      <mat-card-content>
+        <p>
+          {{item?.fields?.desc?.stringValue}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button *ngIf="item?.fields?.link?.stringValue"
+          (click)="viewUrl(item?.fields?.link?.stringValue)" color="primary">VIEW</button>
+        <button mat-stroked-button (click)="share(item?.fields?.link?.stringValue)" color="accent">SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
+<ng-template #noTemplate>
+  <div style="text-align: center;">
+    No News Available
+  </div>
+</ng-template>

@@ -15,8 +15,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-
-const material = [MatSidenavModule, MatToolbarModule, MatDividerModule, MatButtonModule, MatIconModule, FlexLayoutModule]
+import { MatCardModule } from '@angular/material/card';
+const material = [MatSidenavModule, MatToolbarModule, MatDividerModule, MatButtonModule, MatIconModule, FlexLayoutModule, MatCardModule]
 @NgModule({
   declarations: [
     NavComponent,
