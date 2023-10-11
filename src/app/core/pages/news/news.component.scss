@@ -1,3 +1,22 @@
+.container {
+  min-height: 100vh;
+  padding: 15px;
+  background-color: rgb(211, 231, 243);
+}
+
 .example-card {
   margin-block: 15px;
+}
+
+.news-container {
+  padding-left: 20px;
+}
+
+.img-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  overflow: hidden;
 }
